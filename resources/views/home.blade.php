@@ -19,6 +19,7 @@
                         </div>
                     @endif
                     <div class="table-wrapper">
+                        @auth
                         <form class="form-inline my-2 my-lg-0" method="GET" action="{{ route('search') }}">
                             <input class="form-control mr-sm-2" name="search" type="search" placeholder="Szukaj">
                             <button type="submit" class="btn btn-primary">
@@ -121,6 +122,9 @@
                                 </div>
                             </div>
                         </form>
+                        @else
+                            <h1>ZALOGUJ SIĘ, ABY ZARZĄDZAĆ KONTAKTAMI!</h1>
+                        @endauth
                     </div>
                 </div>
             </div>
